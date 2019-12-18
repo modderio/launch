@@ -1,0 +1,27 @@
+{
+    "extends": "eslint-config-bamboo",
+    "compilerOptions": {
+        "target": "es2016",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "emitDecoratorMetadata": true,
+        "esModuleInterop": true,
+        "experimentalDecorators": true,
+        "sourceMap": true,
+        "declaration": true,
+        "declarationMap": true,
+        "removeComments": true,
+        "lib": ["es2017", "esnext.asynciterable", "dom"],
+        "types": ["node"],
+        "outDir": "dist",
+        "rootDir": "src",
+    },
+    "include": [
+        "src/**/*",
+    ],
+    "exclude": [
+        "**/node_modules",
+        "**/dist",
+    ]
+}
+  
