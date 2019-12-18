@@ -1,7 +1,8 @@
 {
-  "name": "@modder.io/launch",
+  "name": "@modder/launch",
   "version": "0.1.0",
   "description": "a nodemon utility",
+  "main": "./dist/launch.js",
   "bin": {
     "launch": "./dist/bin/run.js"
   },
@@ -10,6 +11,8 @@
     "lint:fix": "npm run lint -- --fix",
     "build": "tsc --build tsconfig.json"
   },
+  "author": "Nurdism <https://github.com/nurdism>",
+  "license": "MIT",
   "homepage": "https://github.com/modderio/launch/#readme",
   "repository": {
     "type": "git",
@@ -18,8 +21,6 @@
   "bugs": {
     "url": "https://github.com/modderio/launch/issues"
   },
-  "author": "Nurdism <https://github.com/nurdism>",
-  "license": "MIT",
   "devDependencies": {
     "@types/glob": "^7.1.1",
     "@types/nodemon": "^1.19.0",
