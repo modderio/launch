@@ -1,5 +1,5 @@
 {
-  "name": "@modder.io/lauch",
+  "name": "@modder.io/launch",
   "version": "0.1.0",
   "description": "a nodemon utility",
   "bin": {
@@ -9,6 +9,14 @@
     "lint": "eslint src/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "build": "tsc --build tsconfig.json"
+  },
+  "homepage": "https://github.com/modderio/launch/#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/modderio/launch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/modderio/launch/issues"
   },
   "author": "Nurdism <https://github.com/nurdism>",
   "license": "MIT",
@@ -30,6 +38,5 @@
   },
   "peerDependencies": {
     "nodemon": "^2.0.2"
-  },
-  "dependencies": {}
+  }
 }
