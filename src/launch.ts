@@ -45,10 +45,13 @@ export class Lauch {
   constructor() {
     emitKeypressEvents(process.stdin)
 
+    process.on('SIGINT', () => {
+      process.exit(0)
+    })
     process.stdin.setRawMode(true)
     process.stdin.on('keypress', (str, key) => {
       if (key && key.ctrl && key.name === 'c') {
-        process.exit(0)
+        process.kill(0, 'SIGINT')
       }
 
       if (key && key.ctrl && key.name === 'r') {
@@ -206,5 +209,7 @@ export class Lauch {
       .replace(/\$\{cwd\}/i, this.paths.cwd)
       .replace(/\$\{root\}/i, this.paths.root)
       .replace(/\$\{package\}/i, this.paths.package)
+      .replace(/\/\//m, '/')
+      .replace(/\\\\/m, '\\')
   }
 }
